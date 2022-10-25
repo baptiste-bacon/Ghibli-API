@@ -1,0 +1,17 @@
+extends ../template.pug
+
+block variables
+  - var template = 'index'
+
+block content
+    .home 
+      .home__wrapper 
+        .home__title Film List :
+        ul.home__film__list
+          each film in filmsList
+            li.home__film__list__item
+              a.home__film__list__item__link(href=`/films/${film.id}`) 
+                figure.film__list__media 
+                  image.film__list__media__image(src=film.image )
+                h3.film__list__item__title=film.title 
+                p.film__list__item__date=film.release_date

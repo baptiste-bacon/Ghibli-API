@@ -1,0 +1,28 @@
+extends ../template.pug
+
+block variables
+  - var template = 'index'
+
+block content
+    .detail
+      .detail__wrapper
+        .detail__card
+          figure.detail__card__media 
+            img.detail__card__media__image(src=film.movie_banner, alt="")
+          h2.detail__card__title
+            span=film.title
+            span=film.release_date
+          h4.detail__card__author=film.director
+          p.detail__card__description=`"${film.description}"`
+        .detail__informations
+          .character__card 
+            h3.character__card__title Characters List :
+            ul.character__card__list
+              each character, index in filmCharactersList
+                li.character__card__list__item=character.name
+
+          .location__card 
+            h3.location__card__title Locations List :
+            ul.location__card__list
+              each location, index in filmLocationsList
+                li.location__card__list__item=location.name

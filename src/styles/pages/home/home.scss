@@ -1,0 +1,52 @@
+.home {
+  background-color: #628281;
+  font-family: "Montserrat";
+}
+.home__wrapper {
+  padding: 0 24.6rem;
+}
+.home__title {
+  font-size: 5.6rem;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-variant: small-caps;
+  background-color: white;
+  border: solid black 4px;
+  width: 33.3rem;
+  margin-bottom: 6.4rem;
+  margin-top: 4.8rem;
+}
+.home__film__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6.4rem 3.2rem;
+  width: 142.8rem;
+  padding-bottom: 6.4rem;
+}
+.home__film__list__item {
+  background-color: white;
+  padding: 3.2rem 2.4rem 2.4rem 2.4rem;
+  max-width: 33.3rem;
+
+  border: solid black 4px;
+}
+.film__list__media {
+  position: relative;
+  width: 27.2rem;
+  height: 40.8rem;
+}
+.film__list__media__image {
+  @extend %cover;
+}
+
+.film__list__item__title {
+  padding-top: 0.8rem;
+  font-size: 2.4rem;
+  text-align: right;
+  text-decoration: underline;
+}
+.film__list__item__date {
+  font-size: 1.6rem;
+  text-align: right;
+  padding-top: 0.4rem;
+}
